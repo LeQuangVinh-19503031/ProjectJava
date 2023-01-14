@@ -1,6 +1,8 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -32,19 +34,22 @@ public class Couterview extends JFrame {
 		ActionListener action = new CouterListener(this);
 		
 		jButton_Up = new JButton("Up");
+		jButton_Up.setFont(new Font("Time New Romas", Font.BOLD, 20));
 		jButton_Up.addActionListener(action);
 		
 		jButton_Down = new JButton("Down");
+		jButton_Down.setFont(new Font("Time New Romas", Font.BOLD, 20));
 		jButton_Down.addActionListener(action);
 		
 		JButton jButton_Reset = new JButton("Reset");
+		jButton_Reset.setFont(new Font("SansSerif", Font.BOLD, 20));
 		jButton_Reset.addActionListener(action);
 		
 		jLabel_Value = new JLabel(couterModel.getValue()+"", JLabel.CENTER);
-		
+		jLabel_Value.setFont(new Font("Time New Romas", Font.BOLD, 20));
 		JPanel jPanel = new JPanel();
 		jPanel.setLayout(new BorderLayout());
-		
+		jPanel.setBackground(Color.DARK_GRAY);
 		jPanel.add(jButton_Up, BorderLayout.NORTH);
 		jPanel.add(jButton_Down, BorderLayout.SOUTH);
 		jPanel.add(jButton_Reset, BorderLayout.EAST);

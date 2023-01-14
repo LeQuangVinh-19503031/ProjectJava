@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import view.Couterview;
 
 public class CouterListener implements ActionListener {
+
 	private Couterview ctv;
 
 	public CouterListener(Couterview ctv) {
